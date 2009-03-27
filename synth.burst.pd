@@ -1,0 +1,15 @@
+#N canvas 220 89 450 300 10;
+#X obj 287 142 ead~ 5 100;
+#X obj 231 144 noise~;
+#X obj 257 215 outlet~;
+#X obj 259 188 *~;
+#X obj 104 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 125 135 bam!;
+#X obj 105 78 inlet;
+#X connect 0 0 3 1;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 85 60 1 100 100;

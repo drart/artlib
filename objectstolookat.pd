@@ -1,0 +1,17 @@
+#N canvas 513 22 450 300 10;
+#X obj 232 41 scramble~;
+#X obj 134 99 filterortho~;
+#X obj 66 160 biquadseries~;
+#X obj 244 124 gcanvas 80 80;
+#X obj 73 80 mixer~ 4;
+#X obj 40 40 morse;
+#X obj 67 213 mknob 25 100 0 127 0 0 empty empty empty -2 -6 0 8 -260097
+-1 -1 0 1;
+#X obj 122 258 rojo~;
+#X text 162 257 mrpeach;
+#X obj 270 99 quantize~;
+#X obj 258 253 noisi~;
+#X obj 314 253 noish~;
+#X obj 181 217 dfreq~;
+#X text 227 220 zero crossing detector;
+#X obj 304 59 blockswap~;

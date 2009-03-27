@@ -1,0 +1,275 @@
+#N canvas 185 245 868 360 10;
+#X obj 426 256 readsf~ 2;
+#X obj 7 22 playlist all 400 300 {Helvetica 10 bold} #457782 yellow
+black red;
+#X obj 426 277 vols~;
+#N canvas 11 180 529 449 guts 0;
+#X obj 173 185 prepend set;
+#X msg 97 203 open /Volumes/Orchive/samples/granbdstretch3.wav;
+#X obj 19 118 prepend open;
+#X msg 108 183 1;
+#X msg 144 184 0;
+#X obj 19 98 inlet;
+#X obj 14 273 outlet;
+#X obj 102 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 124 111 start;
+#X text 122 127 stop;
+#X text 123 142 load;
+#X obj 85 282 outlet;
+#X obj 86 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 154 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 85 260 set playing;
+#X msg 155 256 set stopped;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 0 14 0;
+#X connect 4 0 6 0;
+#X connect 4 0 15 0;
+#X connect 5 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 1 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 13 0;
+#X connect 17 0 13 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 426 188 pd guts;
+#X obj 514 192 vsl 15 50 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4600 1;
+#N canvas 524 467 450 300 switcher 0;
+#X obj 113 196 gate 4;
+#X obj 108 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 129 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 149 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 168 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 56 247 outlet;
+#X obj 101 249 outlet;
+#X obj 145 248 outlet;
+#X obj 188 247 outlet;
+#X obj 241 167 inlet;
+#X obj 219 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 115 109 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 2;
+#X floatatom 287 114 5 0 0 0 - - -;
+#X obj 70 166 + 1;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 0 1 2 0;
+#X connect 0 1 6 0;
+#X connect 0 2 3 0;
+#X connect 0 2 7 0;
+#X connect 0 3 4 0;
+#X connect 0 3 8 0;
+#X connect 9 0 0 1;
+#X connect 10 0 0 1;
+#X connect 11 0 13 0;
+#X connect 13 0 0 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 432 35 pd switcher;
+#X obj 426 298 dac~;
+#X msg 424 316 set stopped;
+#X msg 436 166 stopped;
+#X obj 535 257 readsf~ 2;
+#X obj 535 278 vols~;
+#N canvas 11 180 529 449 guts 0;
+#X obj 173 185 prepend set;
+#X msg 97 203 open /Volumes/Orchive/samples/fmgroove.wav;
+#X obj 19 118 prepend open;
+#X msg 108 183 1;
+#X msg 144 184 0;
+#X obj 19 98 inlet;
+#X obj 14 273 outlet;
+#X obj 102 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 124 111 start;
+#X text 122 127 stop;
+#X text 123 142 load;
+#X obj 85 282 outlet;
+#X obj 86 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 154 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 85 260 set playing;
+#X msg 155 256 set stopped;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 0 14 0;
+#X connect 4 0 6 0;
+#X connect 4 0 15 0;
+#X connect 5 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 1 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 13 0;
+#X connect 17 0 13 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 535 189 pd guts;
+#X obj 623 193 vsl 15 50 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3600 1;
+#X obj 535 299 dac~;
+#X msg 533 317 set stopped;
+#X msg 545 167 stopped;
+#X obj 641 254 readsf~ 2;
+#X obj 641 275 vols~;
+#N canvas 11 180 529 449 guts 0;
+#X obj 173 185 prepend set;
+#X msg 97 203 open /Volumes/Orchive/samples/granualrbd.wav;
+#X obj 19 118 prepend open;
+#X msg 108 183 1;
+#X msg 144 184 0;
+#X obj 19 98 inlet;
+#X obj 14 273 outlet;
+#X obj 102 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 124 111 start;
+#X text 122 127 stop;
+#X text 123 142 load;
+#X obj 85 282 outlet;
+#X obj 86 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 154 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 85 260 set playing;
+#X msg 155 256 set stopped;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 0 14 0;
+#X connect 4 0 6 0;
+#X connect 4 0 15 0;
+#X connect 5 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 1 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 13 0;
+#X connect 17 0 13 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 641 186 pd guts;
+#X obj 729 190 vsl 15 50 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4500 1;
+#X obj 641 296 dac~;
+#X msg 639 314 set stopped;
+#X msg 651 164 stopped;
+#X obj 746 252 readsf~ 2;
+#X obj 746 273 vols~;
+#N canvas 11 180 529 449 guts 0;
+#X obj 173 185 prepend set;
+#X msg 97 203 open /Volumes/Orchive/samples/granbdstretch3.wav;
+#X obj 19 118 prepend open;
+#X msg 108 183 1;
+#X msg 144 184 0;
+#X obj 19 98 inlet;
+#X obj 14 273 outlet;
+#X obj 102 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 124 111 start;
+#X text 122 127 stop;
+#X text 123 142 load;
+#X obj 85 282 outlet;
+#X obj 86 237 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 154 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 85 260 set playing;
+#X msg 155 256 set stopped;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 3 0 14 0;
+#X connect 4 0 6 0;
+#X connect 4 0 15 0;
+#X connect 5 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 9 0 1 0;
+#X connect 14 0 16 0;
+#X connect 15 0 17 0;
+#X connect 16 0 13 0;
+#X connect 17 0 13 0;
+#X coords 0 -1 1 1 85 60 1 100 100;
+#X restore 746 184 pd guts;
+#X obj 834 188 vsl 15 50 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 746 294 dac~;
+#X msg 744 312 set stopped;
+#X msg 756 162 playing;
+#X connect 0 0 2 0;
+#X connect 0 1 2 1;
+#X connect 0 2 7 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 2 1 6 1;
+#X connect 3 0 0 0;
+#X connect 3 1 8 0;
+#X connect 4 0 2 2;
+#X connect 5 0 3 0;
+#X connect 5 1 11 0;
+#X connect 5 2 18 0;
+#X connect 5 3 25 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 9 1 10 1;
+#X connect 9 2 14 0;
+#X connect 10 0 13 0;
+#X connect 10 1 13 1;
+#X connect 11 0 9 0;
+#X connect 11 1 15 0;
+#X connect 12 0 10 2;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 16 1 17 1;
+#X connect 16 2 21 0;
+#X connect 17 0 20 0;
+#X connect 17 1 20 1;
+#X connect 18 0 16 0;
+#X connect 18 1 22 0;
+#X connect 19 0 17 2;
+#X connect 21 0 22 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 1;
+#X connect 23 2 28 0;
+#X connect 24 0 27 0;
+#X connect 24 1 27 1;
+#X connect 25 0 23 0;
+#X connect 25 1 29 0;
+#X connect 26 0 24 2;
+#X connect 28 0 29 0;

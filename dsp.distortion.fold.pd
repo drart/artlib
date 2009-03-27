@@ -1,0 +1,50 @@
+#N canvas 719 22 735 459 10;
+#X obj 103 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 103 137 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 56 331 *~;
+#X obj 81 247 line;
+#X msg 81 225 \$1 1000;
+#X obj 81 270 *;
+#X obj 60 182 inlet~;
+#X obj 261 242 line;
+#X msg 261 220 \$1 1000;
+#X obj 261 265 *;
+#X obj 202 330 *~;
+#X obj 117 392 outlet~;
+#X obj 52 293 foldover~;
+#X obj 195 298 foldback~;
+#X text 119 114 foldover;
+#X text 119 135 foldback;
+#X obj 177 102 vsl 15 55 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5400 1;
+#X obj 198 102 vsl 15 55 -1 0 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5400 1;
+#X obj 170 35 loadbang;
+#X msg 212 66 0;
+#X msg 173 67 1;
+#X connect 0 0 4 0;
+#X connect 1 0 8 0;
+#X connect 2 0 11 0;
+#X connect 3 0 5 1;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 1;
+#X connect 6 0 12 0;
+#X connect 6 0 13 0;
+#X connect 7 0 9 1;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 1;
+#X connect 10 0 11 0;
+#X connect 12 0 2 0;
+#X connect 13 0 10 0;
+#X connect 16 0 12 2;
+#X connect 16 0 13 2;
+#X connect 17 0 13 1;
+#X connect 18 0 20 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 16 0;
+#X coords 0 -1 1 1 120 60 1 100 100;

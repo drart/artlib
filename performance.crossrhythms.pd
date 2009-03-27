@@ -1,0 +1,27 @@
+#N canvas 740 22 474 415 10;
+#X obj 134 117 counter.toX 8;
+#X obj 73 27 hsl 128 15 60 130 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 43 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 134 151 synth.burst;
+#X obj 134 220 dsp.gain 100;
+#X obj 43 282 dsp.gain 100;
+#X obj 142 347 dac~;
+#X obj 43 151 sequencer.16;
+#X text 261 22 unfinished;
+#X text 46 236 synth;
+#X obj 44 67 metro 1000;
+#X msg 261 50 1 60 64 66 69 65;
+#X obj 43 117 counter.toX 5;
+#X connect 0 0 3 0;
+#X connect 2 0 10 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 6 1;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 10 0 0 0;
+#X connect 10 0 12 0;
+#X connect 11 0 7 1;
+#X connect 12 0 7 0;

@@ -1,0 +1,106 @@
+#N canvas 696 22 744 357 10;
+#X obj 115 192 delwrite~ \$0-del 1000;
+#X obj 26 227 *~;
+#X obj 26 179 +~ 1;
+#X obj 26 137 osc~ 100;
+#X obj 537 151 samplerate~;
+#X floatatom 536 95 5 0 0 0 - - -;
+#X obj 536 121 t b f;
+#X obj 537 197 pack;
+#X obj 537 220 expr (($f1/$f2) / $f1 )* 1000;
+#X text 575 92 HZ;
+#X text 564 240 outputs milliseconds;
+#X obj 26 261 outlet~;
+#X obj 45 66 inlet~;
+#X obj 115 213 delread~ \$0-del 100;
+#X obj 146 165 *~ 0.9;
+#X msg 241 16 \$1 \$2 \$3 \$4 \$5;
+#X msg 337 16 \$6;
+#X msg 367 15 \$7;
+#X msg 402 17 \$8;
+#X floatatom 26 -38 5 0 0 0 - - -;
+#X floatatom 26 -18 5 0 0 0 - - -;
+#X text 62 -37 Hz;
+#X text 63 -18 Amp Mod;
+#X floatatom 26 2 5 0 1 0 - - -;
+#X text 64 3 Feedback;
+#X symbolatom 26 22 10 0 0 0 - - -;
+#X obj 480 11 biquad~ 1.41407 -0.9998 1 -1.41421 1;
+#X obj 115 241 biquad~ 1.5e-05 3.1e-05 1.5e-05 -1 \, 993706 0.993797
+;
+#N canvas 718 139 483 490 mycoll 0;
+#X text 94 19 coll won't take floats;
+#X obj 22 23 inlet;
+#X obj 20 56 route 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+20;
+#X msg 118 265 0.015718 \, 0 \, -0.015718 \, -1.96859 \, 0.968697 \,
+889 \, 0.99 \, 300;
+#X msg 129 290 1.6e-05 \, 3.2e-05 \, 1.6e-05 \, -1.99181 \, 0.991915
+\, 42 \, 0.5 \, 0;
+#X obj 37 441 outlet;
+#X msg 19 88 1.5e-05 3.1e-05 1.5e-05 -1.99371 0.993797 49 0.96 300
+;
+#X msg 30 112 1.5e-05 3.1e-05 1.5e-05 -1.99371 0.993797 49 0.96 0;
+#X msg 40 136 0.011272 0 -0.011272 -1.97726 0.977537 539 0.92 6900
+;
+#X msg 54 159 0.011272 0 -0.011272 -1.97726 0.977537 707 0.99 12100
+;
+#X msg 70 186 0.230439 0 -0.230439 -1.43889 0.540796 371 0.99 1600
+;
+#X msg 86 210 0.025512 0 -0.025512 -1.94759 0.949161 175 0.8 100;
+#X msg 101 237 0.015718 0 -0.015718 -1.96859 \, 0.968697 \, 35 \, 0.87
+\, 200;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 2 1 7 0;
+#X connect 2 2 8 0;
+#X connect 2 3 9 0;
+#X connect 2 4 10 0;
+#X connect 2 5 11 0;
+#X connect 2 6 12 0;
+#X connect 2 7 3 0;
+#X connect 2 8 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X restore 248 -13 pd mycoll;
+#X floatatom 206 -41 5 0 0 0 - - -;
+#X text 246 -42 biquad \, Hz delay \, feedback \, amp mod \,;
+#X obj 252 82 print;
+#X msg 302 168 clear;
+#X connect 1 0 11 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 5 0 19 0;
+#X connect 6 0 4 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 13 0;
+#X connect 12 0 27 0;
+#X connect 13 0 27 0;
+#X connect 14 0 0 0;
+#X connect 15 0 27 0;
+#X connect 15 0 31 0;
+#X connect 16 0 5 0;
+#X connect 17 0 23 0;
+#X connect 18 0 20 0;
+#X connect 19 0 6 0;
+#X connect 20 0 3 0;
+#X connect 23 0 14 1;
+#X connect 27 0 1 1;
+#X connect 27 0 14 0;
+#X connect 28 0 15 0;
+#X connect 28 0 16 0;
+#X connect 28 0 17 0;
+#X connect 28 0 18 0;
+#X connect 29 0 28 0;
+#X connect 32 0 27 0;
+#X coords 0 -1 1 1 100 100 1 20 -60;

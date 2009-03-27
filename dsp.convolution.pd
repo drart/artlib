@@ -1,0 +1,40 @@
+#N canvas 678 336 619 344 10;
+#X declare -lib bsaylor;
+#X obj 313 30 import bsaylor;
+#X obj 100 229 partconv~ \$0-sample 128;
+#X obj 294 171 table \$0-sample;
+#X text 313 46 required for partconv~;
+#X msg 195 201 set \$1-sample;
+#X obj 196 119 f \$0;
+#X obj 100 205 inlet~;
+#X obj 100 251 outlet~;
+#X obj 293 103 openpanel;
+#X obj 293 126 sprintf read -resize %s \$0-sample;
+#X obj 294 148 soundfiler;
+#X obj 108 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 196 94 t b b;
+#X msg 328 264 \; \$1-sample normalize;
+#X obj 232 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 328 240 f \$0;
+#X obj 108 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 133 128 load;
+#X text 130 142 normalize;
+#X obj 293 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 7 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 12 0 5 0;
+#X connect 12 1 8 0;
+#X connect 14 0 5 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 19 0 8 0;
+#X coords 0 -1 1 1 85 60 1 100 100;

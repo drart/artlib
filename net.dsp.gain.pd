@@ -1,0 +1,28 @@
+#N canvas 707 22 555 499 12;
+#X declare -lib mrpeach;
+#X obj 339 150 inlet~;
+#X obj 339 281 outlet~;
+#X obj 112 128 hsl 60 25 0 127 0 0 empty empty empty -2 -8 0 10 -258113
+-1 -1 3113 1;
+#X obj 363 186 dbtorms;
+#X obj 339 214 *~;
+#X obj 109 31 loadbang;
+#X obj 42 167 import mrpeach;
+#X obj 42 192 udpreceive 8000;
+#X obj 42 248 routeOSC /adam;
+#X obj 42 279 routeOSC /volume;
+#X floatatom 42 307 5 0 0 0 - - -;
+#X obj 42 221 unpackOSC;
+#X obj 109 68 f \$1;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
+#X connect 4 0 1 0;
+#X connect 5 0 12 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 12 0;
+#X connect 11 0 8 0;
+#X connect 12 0 2 0;
+#X coords 0 -1 1 1 85 60 1 100 100;

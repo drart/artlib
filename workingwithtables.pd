@@ -1,0 +1,14 @@
+#N canvas 489 423 450 300 10;
+#X obj 20 32 pack s \$0;
+#X obj 20 74 soundfiler;
+#X obj 284 14 table \$0-sample;
+#X msg 20 12 /Users/adamtindale/bellphase1.wav;
+#X obj 20 52 sprintf read -resize %s %d-sample;
+#X obj 45 168 s \$0-sample;
+#X msg 45 146 normalize;
+#X msg 46 209 size 7;
+#X connect 0 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;

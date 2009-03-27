@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html><head><title>zexy help</title></head><body>
+    <h1 align="right">zexy help</h1>
+    <br>
+    <p align="right">
+    <strong>ZEXY</strong> is a compilation of some of my externals<br>
+    I hope it might be useful...</p>
+    <hr>
+    <h2 align="center">current version</h2>
+    zexy-2.1<br>
+    <h2 align="center">includes</h2>
+    <ul>
+      <li>signal~-objects
+	<table>
+<!--
+	  <tr>
+	    <td><ul><li>streamin~, streamout~</li></ul></td>
+	    <td>streaming signals over the net</td>
+	  </tr>
+//-->
+	  <tbody><tr>
+	    <td><ul>
+		<li>sfplay, sfrecord</li>
+	      </ul></td>
+	    <td>a harddisk-recording system</td>
+	  </tr><tr>
+<!--
+	    <td><ul><li>stdin~, stdout~</li></ul></td>
+	    <td>streaming signals to the standard in/output</td>
+	  </tr><tr>
+//-->
+	    <td><ul><li>noish~</li></ul></td>
+	    <td>downsampled noise -generator</td>
+	  </tr><tr>
+	    <td><ul><li>noisi~</li></ul></td>
+	    <td>interpolating downsampled noise -generator</td>
+	  </tr><tr>
+	    <td><ul><li>dirac~</li></ul></td>
+	    <td>single-dirac-pulse -generator</td>
+	  </tr><tr>
+	    <td><ul><li>step~</li></ul></td>
+	    <td>unity-step and rectangular-window -generator</td>
+	  </tr><tr>
+	    <td><ul><li>limiter~</li></ul></td>
+	    <td>a limiter/compressor module</td>
+	  </tr><tr>
+	    <td><ul><li>swap~</li></ul></td>
+	    <td>16bit byte-swap</td>
+	  </tr><tr>
+	    <td><ul><li>quantize~</li></ul></td>
+	    <td>quantize to any number of steps</td>
+	  </tr><tr>
+	    <td><ul><li>sigzero~</li></ul></td>
+	    <td>detects, whether a signal is zero~ or not</td>
+	  </tr><tr>
+	    <td><ul><li>envrms~</li></ul></td>
+	    <td>envelope follower that outputs rms instead of dB</td>
+	  </tr><tr>
+	    <td><ul><li>avg~, tavg~</li></ul></td>
+	    <td>arithmetic mean of a signal (vector-wise or triggered)</td>
+	  </tr><tr>
+	    <td><ul><li>pdf~</li></ul></td>
+	    <td>probability density function</td>
+	  </tr><tr>
+	    <td><ul><li>dfreq~</li></ul></td>
+	    <td>simple frequency detector</td>
+	  </tr><tr>
+	    <td><ul><li>nop~</li></ul></td>
+	    <td>a do-nothing (delays signals for one block)</td>
+	  </tr><tr>
+	    <td><ul><li>z~</li></ul></td>
+	    <td>samplewise delay</td>
+	  </tr><tr>
+	    <td><ul><li>&lt;~, ==~, &gt;~</li></ul></td>
+	    <td>comparing signals</td>
+	  </tr><tr>
+	    <td><ul><li>&amp;&amp;~, ||~</li></ul></td>
+	    <td>logical AND/OR</td>
+	  </tr><tr>
+	    <td><ul><li>abs~</li></ul></td>
+	    <td>absolute value</td>
+	  </tr><tr>
+	    <td><ul><li>sgn~</li></ul></td>
+	    <td>signum</td>
+	  </tr><tr>
+	    <td><ul><li>pack~, unpack~</li></ul></td>
+	    <td>convert signals to (packages of) floats and vice-versa</td>
+	  </tr><tr>
+	    <td><ul><li>multiplex~, mux~</li></ul></td>
+	    <td>multiplex~ 1 IN~signal to 1-of-n OUT~signals</td>
+	  </tr><tr>
+	    <td><ul><li>demultiplex~, demux~</li></ul></td>
+	    <td>demultiplex~ 1-of-n IN~signals to 1 OUT~signal</td>
+	  </tr><tr>
+	    <td><ul><li>blockswap~</li></ul></td>
+	    <td>swap the lower and the higher part of a signal block</td>
+	  </tr><tr>
+	    <td><ul><li>blockmirror~</li></ul></td>
+	    <td>time-revert the signal of a block</td>
+	  </tr>
+	</tbody></table></li>
+      <li>message-objects
+	<table>
+	  <tbody><tr>
+	    <td><ul><li>tabread4</li></ul></td>
+	    <td>the missing object for table-reading that does 4point-interpolation<br>
+	    this became obsolete, since pd&gt;=pd-0.31 provides this feature too</td>
+	  </tr><tr>
+	    <td><ul><li>tabdump</li></ul></td>
+	    <td>dump a table as a package of floats</td>
+	  </tr><tr>
+	    <td><ul><li>tabset</li></ul></td>
+	    <td>set a table with a list</td>
+	  </tr><tr>
+	    <td><ul><li>makesymbol</li></ul></td>
+	    <td>concatenate a list of anything in a formatted way to a symbol</td>
+	  </tr><tr>
+	    <td><ul><li>list2symbol, l2s</li></ul></td>
+	    <td>convert a list into a single symbol</td>
+	  </tr><tr>
+	    <td><ul><li>symbol2list, s2l</li></ul></td>
+	    <td>split a symbol into a list</td>
+	  </tr><tr>
+	    <td><ul><li>atoi</li></ul></td>
+	    <td>convert ascii to integer</td>
+	  </tr><tr>
+	    <td><ul><li>date, time</li></ul></td>
+	    <td>get the system date/time</td>
+	  </tr><tr>
+	    <td><ul><li>index</li></ul></td>
+	    <td>map symbols to indices</td>
+	  </tr><tr>
+	    <td><ul><li>segregate</li></ul></td>
+	    <td>segregates the input to various outlets by type</td>
+	  </tr><tr>
+	    <td><ul><li>niagara</li></ul></td>
+	    <td>split 1 package into 2 at a specifique point</td>
+	  </tr><tr>
+	  </tr><tr>
+	    <td><ul><li>glue</li></ul></td>
+	    <td>append a list to another</td>
+          </tr><tr>
+	    <td><ul><li>packel</li></ul></td>
+	    <td>get the nth element of a package</td>
+	  </tr><tr>	    
+	    <td><ul><li>repack</li></ul></td>
+	    <td>(re)pack (packages of) atoms to packages of a given size</td>
+	  </tr><tr>
+	    <td><ul><li>drip</li></ul></td>
+	    <td>convert packages to (scheduled) sequences of atoms</td>
+	  </tr><tr>
+	    <td><ul><li>fifop</li></ul></td>
+	    <td>list FIFO (first-in-first-out) with priorities</td>
+	  </tr><tr>
+	    <td><ul><li>lifop</li></ul></td>
+	    <td>list LIFO (last-in-first-out) with priorities</td>
+	  </tr><tr>
+	    <td><ul><li>repeat</li></ul></td>
+	    <td>repeat a message a number of times</td>
+	  </tr><tr>
+	    <td><ul><li>lister, l</li></ul></td>
+	    <td>store a list of any length</td>
+	  </tr><tr>
+	    <td><ul><li>any2list, a2l</li></ul></td>
+	    <td>convert "anything"s to lists</td>
+          </tr><tr>
+            <td><ul><li>list2int, i2l</li></ul></td>
+            <td>convert all floats of a list to integers</td>
+	  </tr><tr>
+	    <td><ul><li>sort</li></ul></td>
+	    <td>shell-sort a package of floats</td>
+	  </tr><tr>
+	    <td><ul><li>demultiplex, demux</li></ul></td>
+	    <td>demultiplex the input to several outputs</td>
+	  </tr><tr>
+	    <td><ul><li>multiplex, mux</li></ul></td>
+	    <td>multiplex several inputs to one output</td>
+	  </tr><tr>
+	    <td><ul><li>prime</li></ul></td>
+	    <td>detect whether a given number is prime or not</td>
+	  </tr><tr>
+	    <td><ul><li>mavg</li></ul></td>
+	    <td>a moving average filter with variable window size</td>
+	  </tr><tr>
+            <td><ul><li>sum</li></ul></td>
+            <td>sum the elements of a list of floats</td>
+	  </tr><tr>
+            <td><ul><li>mean</li></ul></td>
+            <td>get the mean value of a list of floats</td>
+          </tr><tr>
+            <td><ul><li>minmax</li></ul></td>
+            <td>get the minimum and the maximum of a vector</td>
+          </tr><tr>
+            <td><ul><li>deg2rad</li></ul></td>
+            <td>convert degree to radiant</td>
+          </tr><tr>
+            <td><ul><li>rad2deg</li></ul></td>
+            <td>convert radiant to degree</td>
+
+          </tr><tr>
+            <td><ul><li>cart2pol</li></ul></td>
+            <td>convert cartesian coordinates to polar</td>
+          </tr><tr>
+            <td><ul><li>cart2sph</li></ul></td>
+            <td>convert cartesian coordinates to spheric</td>
+          </tr><tr>
+            <td><ul><li>pol2cart</li></ul></td>
+            <td>convert polar coordinates to cartesian</td>
+          </tr><tr>
+            <td><ul><li>pol2sph</li></ul></td>
+            <td>convert polar coordinates to spheric</td>
+          </tr><tr>
+            <td><ul><li>sph2pol</li></ul></td>
+            <td>convert spheric coordinates to polar</td>
+          </tr><tr>
+            <td><ul><li>sph2cart</li></ul></td>
+            <td>convert spheric coordinates to cartesian</td>
+          </tr><tr>
+            <td><ul><li>wrap</li></ul></td>
+            <td>wrap a float between 2 limits</td>
+          </tr><tr>
+	    <td><ul><li>nop</li></ul></td>
+	    <td>a do nothing - pass everything</td>
+	  </tr><tr>
+	    <td><ul><li>strcmp</li></ul></td>
+	    <td>compare (lists as if they were) strings</td>
+	  </tr><tr>
+	    <td><ul><li>.</li></ul></td>
+	    <td>scalar multiply two vectors (lists of floats)</td>
+	  </tr><tr>
+	    <td><ul><li>msgfile</li></ul></td>
+	    <td>a powerfull derivative of <em>textfile</em></td>
+	  </tr><tr>
+	    <td><ul><li>operating_system</li></ul></td>
+	    <td>get the operating system your patch is currently running on</td>
+	  </tr>
+	</tbody></table></li>
+      </ul>
+  
+    <hr>
+    <h2 align="center">release notes</h2>
+    <p></p><div align="center">zexy-0.1</div>
+      featuring <em>limiter~, noish~, noisi~, dirac~, step~</em><br>
+      and got the makefile work<p></p><br>
+    <p></p><div align="center">zexy-0.2</div>
+      added <em>sfplay</em>(by winfried ritsch)<em>, sfrecord, sigzero~, nop~, tabread4, makefilenamen</em><p></p><br>
+    <p></p><div align="center">zexy-0.3</div>
+      added <em>swap~, quantize~</em><br>
+      removed the buggy <em>makefilenamen</em> and replaced it by <em>makesymbol</em><br>
+      tried to made the "help" feature consistent
+<p></p><br>
+    <p></p><div align="center">zexy-0.4</div>
+      added <em>z~, pdf~, &gt;~, ==~, &lt;~, &amp;&amp;~, ||~, abs~, sgn~, dfreq~</em>(by winfried ritsch)<em>, date, time</em><br>
+      added references and an install feature<p></p><br>
+    <p></p><div align="center">zexy-0.5</div>
+      temporarily removed <em>streamin~, streamout~, stdin~, stdout~</em><br>
+      added <em>pack~, unpack~, index, segregate, unfold, niagara, lister, nop</em><br>
+      fixed the bug within <em>date, time</em><p></p><br>
+    <p></p><div align="center">zexy-0.6</div>
+      added <em>repack, packel, drip, sort, demultiplex, tabdump</em><br>
+      replaced <em>unfold</em> by the far more powerful <em>drip</em><p></p><br>
+    <p></p><div align="center">zexy-0.7</div>
+      added <em>a2l, strcmp, msgfile</em><br>
+    <p></p><div align="center">zexy-0.8</div>
+      added <em>matrix~, multiline~, multiplex~, demultiplex~<br>matrix, mtx_eye, mtx_ones, mtx_zeros, mtx_diag, mtx_trace,
+	mtx_transpose, mtx_add (mtx_+), mtx_mul (mtx_*), mtx_.*, mtx./, mtx_check, mtx_print<br>
+	mavg</em><br>
+      added a float-method to the <em>z~</em> so you can reset the delay (and beautified the code)
+    <p></p>
+    <p></p><div align="center">zexy-0.8 patch-1</div>
+      added <em>mtx_row, mtx_col, mtx_element, mtx_mean, mtx_rand, list2int, mean</em><br>
+      fixed the <em>pdf~</em>, which used to crash when it was fed with values exceeded the range (-1..+1); why did no one ever noticed this ???<br>
+      fixed the <em>limiter~</em> helppatch<br>
+    <p></p><div align="center">zexy-0.8 patch-2</div>
+          added <em>mtx_inverse, mtx_pivot</em><br>
+	  fixed some more help-patches<br>
+    <p></p><div align="center">zexy-1.0</div>
+      added <em>atoi, glue, list2symbol, mtx_roll, mtx_scroll, ., mean, minmax</em><br>
+      revised the help-system<br>
+      made a major release
+    <p></p><div align="center">zexy-1.0 patch-1</div>
+      fixed a stupid little bug in the <em>glue</em>-object<br>
+    <p></p><div align="center">zexy-1.1</div>
+      added <em>deg2rad, rad2deg, cart2pol, pol2cart, cart2sph, sph2cart, pol2sph, sph2pol</em><br>
+      Juha Vehviläinen noticed a bug in the <em>list2symbol</em>, which appears only in windos; anyhow he fixed it for me<br>
+    <p></p><div align="center">zexy-1.2</div>
+      forgot this release<br>
+    <p></p><div align="center">zexy-1.3</div>
+      added <em>wrap, repeat, symbol2list</em>. added documentation<br>
+    <p></p><div align="center">zexy-2.0</div>
+      removed all <em>matrix</em>-objects (moved them to the <tt>iemmatrix</tt>-library)<br>
+      1-cfile=1-object<br>
+      use abstractions if it is possible instead of externals<br>
+      for some objects, both abstractions and externals are provided (e.g. <em>&amp;&amp;~</em>)<br>
+      renamed <em>lp</em> to <em>lpt</em> and finally included olaf's changes to make it run on windows<br>
+    <p></p><div align="center">zexy-2.0</div>
+     added <em>fifop, lifop</em><br>
+     fixed bugs (e.g. with <em>multiplex</em>)<br>
+     fixed documentation<br>
+     renamed "&lt;...&gt;_tilde.c" files to "&lt;...&gt;~.c"<br>
+   <h2 align="center">to-do</h2>
+    make <em>streamin~, stdin~</em> work !!!<br>
+    add <em>a-law</em> and <em>mu-law</em> encoders/decoders<br>
+    <br>
+    <h2 align="center">BUGS</h2>
+    <p></p><br>
+    <hr>
+    <address><a href="mailto:zmoelnig@NOSPAM@iem.at">Johannes M Zmoelnig</a></address>
+<!-- Created: Fri Oct 15 11:55:49 CEST 1999 -->
+<!-- hhmts start -->
+Last modified: Wed Jun 18 18:27:55 CEST 2003
+<!-- hhmts end -->
+  
+</body></html>
