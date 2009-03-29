@@ -1,5 +1,4 @@
-#N canvas 388 236 482 366 10;
-#X obj 33 54 adc~;
+#N canvas 481 287 482 366 10;
 #X obj 33 77 *~ 4096;
 #X obj 33 101 +~ 4096;
 #X obj 32 126 tabread~ \$0-wavetable;
@@ -8,8 +7,11 @@
 #X msg 58 259 \; \$1-wavetable sinesum 4096 7 3 1 3 1 0 2 0 0 2 \;
 \$1-wavetable normalize;
 #X obj 58 213 loadbang;
+#X obj 33 54 inlet~;
+#X obj 31 160 outlet~;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 5 0 6 0;
-#X connect 7 0 5 0;
+#X connect 2 0 8 0;
+#X connect 4 0 5 0;
+#X connect 6 0 4 0;
+#X connect 7 0 0 0;

@@ -41,18 +41,31 @@
 #X text 108 121 Transposition (Half steps);
 #X text 347 81 www.pd-tutorial.com;
 #X text 366 58 Johannes Kreidler;
-#X obj 109 159 hsl 128 15 100 30000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
-#X obj 109 141 hsl 128 15 -36 36 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+#X obj 109 159 hsl 128 15 100 30000 0 0 \$0-window empty empty -2 -8
+0 10 -262144 -1 -1 9800 1;
+#X obj 109 141 hsl 128 15 -36 36 0 0 \$0-transposition empty empty
+-2 -8 0 10 -262144 -1 -1 6522 1;
 #X text 240 155 window;
 #X obj 105 25 loadbang;
 #X msg 105 52 0;
 #X obj 369 130 inlet~;
 #X obj 125 869 outlet~;
-#X obj 108 178 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 108 178 hsl 128 15 0 1 0 0 \$0-feedback empty empty -2 -8 0
+10 -262144 -1 -1 0 1;
 #X text 240 176 feedback;
+#X obj 626 321 outlet;
+#X obj 624 91 inlet;
+#X obj 637 174 t b b b;
+#X obj 640 204 value \$0-transpostion;
+#X obj 676 230 value \$0-window;
+#X obj 694 255 value \$0-feedack;
+#X obj 626 286 pack 0 0 0;
+#X msg 680 104 print;
+#X obj 798 229 r \$0-window;
+#X obj 757 176 r \$0-transposition;
+#X obj 815 255 r \$0-feedback;
+#X obj 172 61 unpack 0 0 0;
+#X obj 624 147 route print list;
 #X connect 1 0 9 0;
 #X connect 2 0 3 0;
 #X connect 2 0 6 0;
@@ -105,4 +118,21 @@
 #X connect 46 0 43 0;
 #X connect 47 0 0 0;
 #X connect 49 0 35 0;
+#X connect 52 0 63 0;
+#X connect 53 0 54 0;
+#X connect 53 1 55 0;
+#X connect 53 2 56 0;
+#X connect 54 0 57 0;
+#X connect 55 0 57 1;
+#X connect 56 0 57 2;
+#X connect 57 0 51 0;
+#X connect 58 0 63 0;
+#X connect 59 0 55 0;
+#X connect 60 0 54 0;
+#X connect 61 0 56 0;
+#X connect 62 0 43 0;
+#X connect 62 1 42 0;
+#X connect 62 2 49 0;
+#X connect 63 0 53 0;
+#X connect 63 1 62 0;
 #X coords 0 -1 1 1 200 100 1 100 100;
