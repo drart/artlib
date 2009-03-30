@@ -1,0 +1,12 @@
+#N canvas 398 386 426 165 10;
+#X obj 44 44 inlet~;
+#X obj 23 99 outlet~;
+#X obj 23 69 pow~;
+#X obj 23 20 sig~ 2.71828;
+#X text 119 18 exp~;
+#X text 22 123 2007 --art;
+#X text 118 45 raises e by input where e is euler's constant;
+#X text 118 30 ===========================;
+#X connect 0 0 2 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
