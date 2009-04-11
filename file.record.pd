@@ -1,6 +1,5 @@
-#N canvas 352 22 450 300 10;
+#N canvas 371 87 450 300 10;
 #X obj 278 266 sfwrite~;
-#X obj 288 118 openpanel;
 #X obj 105 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 126 123 soundfile;
@@ -13,13 +12,14 @@
 #X msg 185 226 start;
 #X msg 122 225 stop;
 #X obj 277 241 inlet~;
-#X connect 1 0 7 0;
-#X connect 2 0 1 0;
-#X connect 4 0 8 0;
-#X connect 7 0 6 0;
-#X connect 8 0 10 0;
-#X connect 8 1 9 0;
-#X connect 9 0 0 0;
+#X obj 288 118 savepanel;
+#X connect 1 0 11 0;
+#X connect 3 0 7 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
 #X connect 10 0 0 0;
-#X connect 11 0 0 0;
+#X connect 11 0 6 0;
 #X coords 0 -1 1 1 85 60 1 100 100;

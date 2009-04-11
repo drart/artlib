@@ -1,0 +1,14 @@
+#N canvas 206 26 585 567 10;
+#X obj 21 11 adc~;
+#X obj 22 80 dsp.distortion.swappermut;
+#X obj 22 149 mixer.inbus \$0-thing;
+#X obj 27 391 mixer.outbus \$0-thing;
+#X obj 27 438 dsp.output;
+#X obj 182 79 dsp.granulator;
+#X obj 182 191 mixer.inbus \$0-thing;
+#X connect 0 0 5 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 6 0;

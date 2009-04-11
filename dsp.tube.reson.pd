@@ -1,5 +1,4 @@
-#N canvas 483 22 744 357 10;
-#X declare -lib zexy;
+#N canvas 585 104 656 371 10;
 #X obj 257 128 delwrite~ \$0-del 1000;
 #X obj 140 234 *~;
 #X obj 140 186 +~ 1;
@@ -21,8 +20,6 @@
 #X text 63 -18 Amp Mod;
 #X floatatom 26 2 5 0 1 0 - - -;
 #X text 64 3 Feedback;
-#X obj 614 -39 import zexy;
-#X text 613 -20 z~ is a zexy object;
 #X floatatom 26 21 5 0 1 0 - - -;
 #X text 64 22 Q;
 #X obj 227 84 reson~ 1 50 100;
@@ -36,14 +33,14 @@
 #X connect 6 1 7 1;
 #X connect 7 0 8 0;
 #X connect 8 0 13 0;
-#X connect 12 0 25 0;
+#X connect 12 0 23 0;
 #X connect 13 0 1 1;
 #X connect 14 0 0 0;
 #X connect 15 0 6 0;
-#X connect 15 0 25 2;
+#X connect 15 0 23 2;
 #X connect 16 0 3 0;
 #X connect 19 0 14 1;
-#X connect 23 0 25 3;
-#X connect 25 0 1 1;
-#X connect 25 0 14 0;
+#X connect 21 0 23 3;
+#X connect 23 0 1 1;
+#X connect 23 0 14 0;
 #X coords 0 -1 1 1 100 100 1 20 -60;
