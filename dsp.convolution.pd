@@ -1,4 +1,4 @@
-#N canvas 678 336 619 344 10;
+#N canvas 560 47 619 344 10;
 #X declare -lib bsaylor;
 #X obj 313 30 import bsaylor;
 #X obj 100 229 partconv~ \$0-sample 128;
@@ -15,7 +15,7 @@
 -1 -1;
 #X obj 196 94 t b b;
 #X msg 328 264 \; \$1-sample normalize;
-#X obj 232 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 162 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 328 240 f \$0;
 #X obj 108 143 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -24,6 +24,7 @@
 #X text 130 142 normalize;
 #X obj 293 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 327 212 t b b;
 #X connect 1 0 7 0;
 #X connect 4 0 1 0;
 #X connect 5 0 4 0;
@@ -35,6 +36,8 @@
 #X connect 12 1 8 0;
 #X connect 14 0 5 0;
 #X connect 15 0 13 0;
-#X connect 16 0 15 0;
+#X connect 16 0 20 0;
 #X connect 19 0 8 0;
+#X connect 20 0 5 0;
+#X connect 20 1 15 0;
 #X coords 0 -1 1 1 85 60 1 100 100;

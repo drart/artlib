@@ -1,6 +1,4 @@
 #N canvas 260 390 402 254 10;
-#X obj 27 62 sawtooth~ 400;
-#X obj 114 60 sawtooth~ 400;
 #X obj 95 104 *~;
 #X obj 92 142 moog~;
 #X obj 183 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -9,14 +7,16 @@
 #X obj 55 19 inlet;
 #X obj 105 180 outlet~;
 #X msg 184 113 3 \, 4 100;
-#X connect 0 0 2 0;
-#X connect 1 0 2 1;
-#X connect 2 0 3 0;
-#X connect 3 0 7 0;
+#X obj 27 62 synth.sawtooth~ 400;
+#X obj 150 63 synth.sawtooth~ 400;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 3 0 1 2;
+#X connect 4 0 2 0;
+#X connect 4 0 1 1;
+#X connect 4 0 7 0;
 #X connect 4 0 8 0;
-#X connect 5 0 3 2;
-#X connect 6 0 0 0;
-#X connect 6 0 1 0;
-#X connect 6 0 4 0;
-#X connect 6 0 3 1;
-#X connect 8 0 5 0;
+#X connect 6 0 3 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 1;

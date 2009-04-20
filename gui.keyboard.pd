@@ -1,4 +1,4 @@
-#N canvas 687 22 508 610 10;
+#N canvas 533 22 508 610 10;
 #X declare -lib moonlib;
 #X obj 209 -94 import moonlib;
 #X obj 33 91 gamme 90 40 0 0 0 0 0 0 0 0 0 0 0 0;
@@ -89,4 +89,4 @@
 #X connect 37 0 30 0;
 #X connect 38 0 25 0;
 #X connect 41 0 18 2;
-#X coords 0 -1 1 1 369 45 1 30 88;
+#X coords 0 -1 1 1 369 45 2 30 88;
