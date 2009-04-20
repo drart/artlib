@@ -1,0 +1,19 @@
+Legend
+	- problem
+	* solution
+
+
+Pressing Items
+- Build patches for EPI
+- Think about better preset mechanism
+	- maybe presets only belong in big patches?
+	- maybe I can detect types in arguments and have named presets?
+		* route can do this
+
+
+Future
+- make a list of stupid PD tricks in message boxes
+	- open patches 
+		* open object from pddp
+	- close patches?
+	- parentdollarzero
