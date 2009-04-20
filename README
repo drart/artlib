@@ -1,0 +1,14 @@
+
+artlib is a collection of abstractions for Pure Data by Adam R. Tindale.
+
+
+INSTALL
+=======
+
+1. Unpack artlib into a directory on your hard drive. 
+
+2. Open Pure Data. 
+
+3. Add the artlib directory to the Pure Data path. 
+
+
