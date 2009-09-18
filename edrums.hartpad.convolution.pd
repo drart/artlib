@@ -1,11 +1,11 @@
-#N canvas 593 22 863 502 10;
+#N canvas 468 301 863 502 10;
 #X declare -lib bsaylor;
 #X declare -lib bsaylor;
 #X declare -lib bsaylor;
 #X declare -lib bsaylor;
 #X declare -lib bsaylor;
 #X declare -lib bsaylor;
-#X obj 75 342 dac~;
+#X obj 74 415 dac~;
 #X obj 76 19 adc~ 3 4 5 6 7 8;
 #X obj 72 194 throw~ \$0-bell;
 #X obj 74 285 catch~ \$0-bell;
@@ -26,14 +26,17 @@
 acoustic interpolation!;
 #X text 231 70 load bdwarp in left corner and tikhat in right corner
 ;
+#X obj 74 338 dsp.gain 100;
+#X obj 248 302 dsp.display;
 #X connect 1 0 5 0;
 #X connect 1 2 13 0;
 #X connect 3 0 4 0;
-#X connect 4 0 0 0;
-#X connect 4 0 0 1;
+#X connect 4 0 19 0;
 #X connect 5 0 2 0;
 #X connect 12 0 6 0;
 #X connect 13 0 7 0;
 #X connect 14 0 8 0;
 #X connect 15 0 9 0;
 #X connect 16 0 10 0;
+#X connect 19 0 0 0;
+#X connect 19 0 0 1;

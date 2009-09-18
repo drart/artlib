@@ -18,6 +18,7 @@
 #X msg 327 79 13;
 #X msg 74 37 roomsize 0.93;
 #X msg 75 58 damping 0.2;
+#X obj 248 39 inlet;
 #X connect 0 0 10 0;
 #X connect 0 1 11 0;
 #X connect 1 0 0 0;
@@ -40,4 +41,5 @@
 #X connect 15 0 13 0;
 #X connect 16 0 0 0;
 #X connect 17 0 0 0;
+#X connect 18 0 3 0;
 #X coords 0 -1 1 1 85 60 1 100 100;

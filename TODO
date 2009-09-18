@@ -4,7 +4,6 @@ Legend
 
 
 Pressing Items
-- Build patches for EPI
 - Think about better preset mechanism
 	- maybe presets only belong in big patches?
 	- maybe I can detect types in arguments and have named presets?

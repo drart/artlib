@@ -1,5 +1,5 @@
-#N canvas 0 22 913 770 12;
-#X obj 369 161 delwrite~ b1 5000;
+#N canvas 171 73 1129 804 12;
+#X obj 408 162 delwrite~ b1 5000;
 #X obj 71 742 vd~ b1;
 #X obj 47 405 phasor~;
 #X obj 48 585 *~ -1;
@@ -42,13 +42,13 @@
 #X text 347 81 www.pd-tutorial.com;
 #X text 366 58 Johannes Kreidler;
 #X obj 109 159 hsl 128 15 100 30000 0 0 \$0-window empty empty -2 -8
-0 10 -262144 -1 -1 9800 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 109 141 hsl 128 15 -36 36 0 0 \$0-transposition empty empty
--2 -8 0 10 -262144 -1 -1 6522 1;
+-2 -8 0 10 -262144 -1 -1 6350 1;
 #X text 240 155 window;
 #X obj 105 25 loadbang;
 #X msg 105 52 0;
-#X obj 369 130 inlet~;
+#X obj 408 131 inlet~;
 #X obj 125 869 outlet~;
 #X obj 108 178 hsl 128 15 0 1 0 0 \$0-feedback empty empty -2 -8 0
 10 -262144 -1 -1 0 1;
@@ -66,6 +66,9 @@
 #X obj 815 255 r \$0-feedback;
 #X obj 172 61 unpack 0 0 0;
 #X obj 624 147 route print list;
+#X text 302 135 -36 - 36;
+#X text 301 158 100 - 30000;
+#X text 306 183 0 - 1;
 #X connect 1 0 9 0;
 #X connect 2 0 3 0;
 #X connect 2 0 6 0;
